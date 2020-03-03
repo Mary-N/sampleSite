@@ -6,38 +6,118 @@
     <title>Cat Photo App</title>
 </head>
 <body>
+    <!--  Dear code reader,
+    Well am going to use this html file to practice a few things that I am learning about html from
+    free code camp. Every new thing I will be learning, I will add a comment to it and explain what it
+    does. So don't wonder why I have several coments in my code-->
+
+
     <h1>This is a cat photo App that I got from 
+        <!--This a tag is linking to an external page-->
         <a href="https://www.freecodecamp.org/forum/t/login-code-every-login/195404">here</a>
         at Free code camp </h1>
+    
     <main>
-            <p>If you don't like it well here at the top, yo can <a href="#footer">Jump to Bottom</a></p>
-            <p>Meanwhile I think I like it here at the top. <br> See this cool cat</p>
-            <img src="https://bit.ly/fcc-relaxing-cat" alt="A cute cat lying on its back">
-            <p>Allow me to write some kitty ipsum text down here. Jus to get you to the bottom</p>
-            <p>
-                Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your 
-                ankles chase the red dot, hairball run catnip eat the grass sniff. Purr jump eat the 
-                grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink 
-                fluffy fur catnip scratched. Kitty ipsum dolor sit amet, shed everywhere shed everywhere 
-                stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff. 
-                <br>
-                Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch 
-                sleep in the sink fluffy fur catnip scratched. Kitty ipsum dolor sit amet, shed 
-                everywhere shed everywhere stretching attack your ankles chase the red dot, hairball 
-                run catnip eat the grass sniff. Purr jump eat the grass rip the couch scratched sunbathe, 
-                shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.
-                <br>
-                Meowwww loved it, hated it, loved it, hated it yet spill litter box, scratch at owner, 
-                destroy all furniture, especially couch or lay on arms while you're using the keyboard. 
-                Missing until dinner time toy mouse squeak roll over. With tail in the air lounge in 
-                doorway. Man running from cops stops to pet cats, goes to jail.
-                <br>
-                Intently stare at the same spot poop in the plant pot but kitten is playing with dead mouse. 
-                Get video posted to internet for chasing red dot leave fur on owners clothes meow to be let 
-                out and mesmerizing birds leave fur on owners clothes or favor packaging over toy so purr for 
-                no reason. Meow to be let out play time intently sniff hand run outside as soon as door open 
-                yet destroy couch.
-            </p>
+        
+        <p>If you don't like it well here at the top, yo can 
+            <!--This a tag is linking to an internal section within this page using the # symbol plus
+            the id name of the element we want to refer to-->
+            <a href="#footer">Jump to Bottom</a></p>
+
+        <p>Meanwhile I think I like it here at the top. <br> See this cool cat!
+        Click it to see even more cool cats</p>
+        
+        <!--Learning how to add an image and to  make it a link-->
+        <a href="https://www.google.com/search?sxsrf=ALeKk03HYHpJspU1va4PZD1XhohkCLuOAA:1583252099802&q=cool+cats&tbm=isch&source=univ&sa=X&ved=2ahUKEwiDkv7X2f7nAhVN8OAKHcQHBG0QsAR6BAgJEAE">
+        <img src="https://bit.ly/fcc-relaxing-cat" alt="A cute cat lying on its back">
+        </a>
+
+        <p>I guess you dont know much about cats but here is a simple list of waht cats love to eat</p>
+
+        <!--Learning how to create an unordered list. Meaning the one with bullets-->
+        <ul>
+            <li>Chicken</li>
+            <li>Turkey</li>
+            <li>Beef</li>
+            <li>Tuna</li>
+            <li>Whitefish</li>
+            <li>Heriing</li>
+            <li>Mackerel</li>
+            <li>Milk</li>
+        </ul>
+
+        <p>Mean while, I only know four things that cats hate</p>
+        <!--Learning how to write an ordered list. I mean the one that is numbered-->
+        <ol>
+            <li>Stale food</li>
+            <li>Strangers</li>
+            <li>Loud noise like thunder</li>
+            <li>Car rides</li>
+        </ol>
+        <p>If you know any other things that cats hate, you can write any two down here</p>
+        <ol>
+            <!--Learning how to input text to a text field using the input element with a place holder text. 
+            Here, I want the user to in puthe text in an ordered list. I am also putting each of this
+            items into a form element with an action and a submit button-->
+            <li>
+                <form action="/submit-answer">
+                    <!--Here I am making this input field required by adding the required attribute to the
+                    input element. This makes sure that someone cannot submit without filling
+                    in the text field, meaning it is required-->
+                    <input type="text" placeholder="cats hate" required>
+                    <!--Here I am adding a submit button to the form so that someone can submit-->
+                    <button type="submit">Submit</button>
+                </form>
+            </li>
+            <li>
+                <form action="/submit-answer">
+                    <input type="text" placeholder="cats hate" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </li>
+        </ol>
+
+        <p>At this point I guess you know something about cats. It's high time you decide whether
+            to adopt one or not. If you want need one, click Yes. If you don't, click No
+        </p>
+        <p>Would you love to adopt a cat?</p>
+        <label for="yes">
+            <input id="yes" type="radio" name="adopt-or-not">Yes
+        </label>
+        <label for="no">
+            <input id="no" type="radio" name="adopt-or-not">No
+        </label>
+
+        <p>People usually have characteristics they love about cats.
+        I you need a cat, help me understand which kind of cat you want by choosing 
+        from the characteristics below.
+        </p>
+
+        <p>Allow me to write some kitty ipsum text down here. Just to get you to the bottom</p>
+        <p>
+            Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your 
+            ankles chase the red dot, hairball run catnip eat the grass sniff. Purr jump eat the 
+            grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink 
+            fluffy fur catnip scratched. Kitty ipsum dolor sit amet, shed everywhere shed everywhere 
+            stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff. 
+            <br>
+            Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch 
+            sleep in the sink fluffy fur catnip scratched. Kitty ipsum dolor sit amet, shed 
+            everywhere shed everywhere stretching attack your ankles chase the red dot, hairball 
+            run catnip eat the grass sniff. Purr jump eat the grass rip the couch scratched sunbathe, 
+            shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.
+            <br>
+            Meowwww loved it, hated it, loved it, hated it yet spill litter box, scratch at owner, 
+            destroy all furniture, especially couch or lay on arms while you're using the keyboard. 
+            Missing until dinner time toy mouse squeak roll over. With tail in the air lounge in 
+            doorway. Man running from cops stops to pet cats, goes to jail.
+            <br>
+            Intently stare at the same spot poop in the plant pot but kitten is playing with dead mouse. 
+            Get video posted to internet for chasing red dot leave fur on owners clothes meow to be let 
+            out and mesmerizing birds leave fur on owners clothes or favor packaging over toy so purr for 
+            no reason. Meow to be let out play time intently sniff hand run outside as soon as door open 
+            yet destroy couch.
+        </p>
     </main>
 
     <footer id="footer">Copyright Cat Photo App</footer>
