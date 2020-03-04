@@ -4,6 +4,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cat Photo App</title>
+    <!--Import a google font family called lobster so that i can use it in my css-->
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <style>
+
+        /*This class is for the text i want to turn to blue color */
+        .blue-text{
+            color: blue;
+        }
+
+        /*This class maintains an image's resolution to fit well within its width and height*/
+        .larger-image{
+            width: 500x;
+            height: 500px;
+            object-fit: cover;
+            border-color: lightgray;
+            border-width: 5px;
+            border-style: solid;
+            border-radius: 400px;
+        }
+
+        /*This class give the element a thin red solid border of xpx with a border radius of xpx 
+        to make it round if the radius is lesser eg 20px, it will just have rounded edges*/
+        .thin-red-border {
+            border-color: red;
+            border-width: 5px;
+            border-style: solid;
+            border-radius: 400px;
+            /*This can also make an image circular*/
+            /*border-radius: 50%;*/
+        }
+
+        /*This class give the element a thin colored solid border of xpx with a border radius of xpx 
+        to make it round if the radius is lesser eg 20px, it will just have rounded edges*/
+        /* .thin-gray-border {
+            border-color: lightgray;
+            border-width: 5px;
+            border-style: solid;
+            border-radius: 400px; */
+            /*This can also make an image circular*/
+            /*border-radius: 50%;*/
+        /* } */
+
+        /* .burlywood-background{
+            background-color: burlywood;
+        } */
+
+        /* This id only applies one element and that's my first div element for now */
+        #cat-photo-app-element{
+            background-color: burlywood;
+            /* padding-left: 300px;
+            padding-right: 200px;
+            padding-top: 10px;
+            padding-bottom: 5px; */
+
+            /* This line below is using clockwise notation to put the 4 commented out lines above in one go
+            that's to say we are specifying the padding for all sides at once clockwise 
+            i.e top right bottom left */
+            padding: 10px 200px 5px 300px;
+
+            /* margin-left: 5px;
+            margin-right: 5px;
+            margin-top: 5px;
+            margin-bottom: 5px; */
+
+            /* This line below is using clockwise notation to put the 4 lines above in one go
+            that's to say we are specifying the margin for all sides at once clockwise 
+            i.e top right bottom left */
+            margin: 5px 5px 5px 5px;
+        }
+
+        #footer-div{
+            background-color: burlywood;
+            padding: 10px 300px 5px 500px;
+            margin: 5px 0px 5px 0px;
+            border-radius: 50px;
+        }
+
+        #catphoto-div{
+            padding: 10px 200px 5px 300px;
+            margin: 5px 5px 5px 5px;
+        }
+
+        #jump-to-bottom{
+            padding: 10px 200px 5px 400px;
+        }
+
+        #about-cats{
+            padding: 10px 200px 5px 250px;
+        }
+
+        main{
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+        
+        body{
+            background-color: peachpuff;
+        }
+        /*Set the font size of all h1 elements to 30px*/
+        h1{
+            font-size: 30px;
+        }
+
+        /*I am going to use the lobster ggogle font family i imported above on all h2 elements
+        but if it is not available, the browser can degrade to monospace or the next oe the next etc*/
+        h1{
+            font-family: Lobster, monospace;
+        }
+
+        /*Set the font family of all h1 elements to san serif*/
+        h2{
+            font-family: sans-serif;
+            color: brown;
+        }
+        /* This is an [attribute value ] selector for elements with attributes and values like checkboxes */
+        [type="checkbox"]{
+            margin: 10px 0px 10px 0px;
+        }
+        [type="radio"]{
+            margin: 10px 0px 10px 0px;
+        }
+        [type="text"]{
+            margin: 5px 0px 5px 5px;
+        }
+
+    </style>
 </head>
 <body>
     <!--  Dear code reader,
@@ -11,115 +137,108 @@
     free code camp. Every new thing I will be learning, I will add a comment to it and explain what it
     does. So don't wonder why I have several coments in my code-->
 
-
-    <h1>This is a cat photo App that I got from 
-        <!--This a tag is linking to an external page-->
-        <a href="https://www.freecodecamp.org/forum/t/login-code-every-login/195404">here</a>
-        at Free code camp </h1>
+    <div id="cat-photo-app-element">
+        <h1 class="blue-text">
+            This is my simple page about cats. I got the idea from 
+            <!--This a tag is linking to an external page-->
+            <a href="https://www.freecodecamp.org/forum/t/login-code-every-login/195404">here</a>
+        </h1>
+    </div>
     
     <main>
-        
-        <p>If you don't like it well here at the top, yo can 
-            <!--This a tag is linking to an internal section within this page using the # symbol plus
-            the id name of the element we want to refer to-->
-            <a href="#footer">Jump to Bottom</a></p>
+        <div id="jump-to-bottom">
+            <h2>If you hate cats, 
+                <!--This a tag is linking to an internal section within this page using the # symbol plus
+                the id name of the element we want to refer to-->
+                <a href="#footer">Jump to Bottom</a>
+            </h2>
+        </div> 
+    
+        <div id="catphoto-div">      
+            
+            <!--Learning how to add an image and to  make it a link-->
+            <a target="_blank" href="https://www.google.com/search?sxsrf=ALeKk03HYHpJspU1va4PZD1XhohkCLuOAA:1583252099802&q=cool+cats&tbm=isch&source=univ&sa=X&ved=2ahUKEwiDkv7X2f7nAhVN8OAKHcQHBG0QsAR6BAgJEAE">
+            <img class="larger-image" src="https://bit.ly/fcc-relaxing-cat" alt="A cute cat lying on its back">
+            </a>
 
-        <p>Meanwhile I think I like it here at the top. <br> See this cool cat!
-        Click it to see even more cool cats</p>
-        
-        <!--Learning how to add an image and to  make it a link-->
-        <a href="https://www.google.com/search?sxsrf=ALeKk03HYHpJspU1va4PZD1XhohkCLuOAA:1583252099802&q=cool+cats&tbm=isch&source=univ&sa=X&ved=2ahUKEwiDkv7X2f7nAhVN8OAKHcQHBG0QsAR6BAgJEAE">
-        <img src="https://bit.ly/fcc-relaxing-cat" alt="A cute cat lying on its back">
-        </a>
+        </div>
 
-        <p>I guess you dont know much about cats but here is a simple list of waht cats love to eat</p>
+        <div id="about-cats">
+            <h2>What cats love to eat</h2>
 
-        <!--Learning how to create an unordered list. Meaning the one with bullets-->
-        <ul>
-            <li>Chicken</li>
-            <li>Turkey</li>
-            <li>Beef</li>
-            <li>Tuna</li>
-            <li>Whitefish</li>
-            <li>Heriing</li>
-            <li>Mackerel</li>
-            <li>Milk</li>
-        </ul>
+            <!--Learning how to create an unordered list. Meaning the one with bullets-->
+            <ul>
+                <li>Chicken</li>
+                <li>Turkey</li>
+                <li>Beef</li>
+                <li>Tuna</li>
+                <li>Whitefish</li>
+                <li>Heriing</li>
+                <li>Mackerel</li>
+                <li>Milk</li>
+            </ul>
 
-        <p>Mean while, I only know four things that cats hate</p>
-        <!--Learning how to write an ordered list. I mean the one that is numbered-->
-        <ol>
-            <li>Stale food</li>
-            <li>Strangers</li>
-            <li>Loud noise like thunder</li>
-            <li>Car rides</li>
-        </ol>
-        <p>If you know any other things that cats hate, you can write any two down here</p>
-        <ol>
-            <!--Learning how to input text to a text field using the input element with a place holder text. 
-            Here, I want the user to in puthe text in an ordered list. I am also putting each of this
-            items into a form element with an action and a submit button-->
-            <li>
-                <form action="/submit-answer">
-                    <!--Here I am making this input field required by adding the required attribute to the
-                    input element. This makes sure that someone cannot submit without filling
-                    in the text field, meaning it is required-->
-                    <input type="text" placeholder="cats hate" required>
-                    <!--Here I am adding a submit button to the form so that someone can submit-->
-                    <button type="submit">Submit</button>
-                </form>
-            </li>
-            <li>
-                <form action="/submit-answer">
-                    <input type="text" placeholder="cats hate" required>
-                    <button type="submit">Submit</button>
-                </form>
-            </li>
-        </ol>
+            <h2>What cats hate</h2>
+            <!--Learning how to write an ordered list. I mean the one that is numbered-->
+            <ol>
+                <li>Stale food</li>
+                <li>Strangers</li>
+                <li>Loud noise like thunder</li>
+                <li>Car rides</li>
+            </ol>
+            <h2>Something you know that cats hate?</h2>
+            <ol>
+                <!--Learning how to input text to a text field using the input element with a place holder text. 
+                Here, I want the user to in puthe text in an ordered list. I am also putting each of this
+                items into a form element with an action and a submit button-->
+                <li>
+                    <form action="/submit-answer">
+                        <!--Here I am making this input field required by adding the required attribute to the
+                        input element. This makes sure that someone cannot submit without filling
+                        in the text field, meaning it is required-->
+                        <input type="text" placeholder="cats hate" required>
+                        <!--Here I am adding a submit button to the form so that someone can submit-->
+                        <button type="submit">Submit</button>
+                    </form>
+                </li>
+                <li>
+                    <form action="/submit-answer">
+                        <input type="text" placeholder="cats hate" required>
+                        <button type="submit">Submit</button>
+                    </form>
+                </li>
+            </ol>
 
-        <p>At this point I guess you know something about cats. It's high time you decide whether
-            to adopt one or not. If you want need one, click Yes. If you don't, click No
-        </p>
-        <p>Would you love to adopt a cat?</p>
-        <label for="yes">
-            <input id="yes" type="radio" name="adopt-or-not">Yes
-        </label>
-        <label for="no">
-            <input id="no" type="radio" name="adopt-or-not">No
-        </label>
+            <h2>Would you love to adopt a cat?</h2>
+            <label for="yes">
+                <input id="yes" type="radio" name="adopt-or-not" value="yes">Yes
+            </label> <br>
+            <label for="no">
+                <input id="no" type="radio" name="adopt-or-not" value="no">No
+            </label>
 
-        <p>People usually have characteristics they love about cats.
-        I you need a cat, help me understand which kind of cat you want by choosing 
-        from the characteristics below.
-        </p>
-
-        <p>Allow me to write some kitty ipsum text down here. Just to get you to the bottom</p>
-        <p>
-            Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your 
-            ankles chase the red dot, hairball run catnip eat the grass sniff. Purr jump eat the 
-            grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink 
-            fluffy fur catnip scratched. Kitty ipsum dolor sit amet, shed everywhere shed everywhere 
-            stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff. 
-            <br>
-            Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch 
-            sleep in the sink fluffy fur catnip scratched. Kitty ipsum dolor sit amet, shed 
-            everywhere shed everywhere stretching attack your ankles chase the red dot, hairball 
-            run catnip eat the grass sniff. Purr jump eat the grass rip the couch scratched sunbathe, 
-            shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.
-            <br>
-            Meowwww loved it, hated it, loved it, hated it yet spill litter box, scratch at owner, 
-            destroy all furniture, especially couch or lay on arms while you're using the keyboard. 
-            Missing until dinner time toy mouse squeak roll over. With tail in the air lounge in 
-            doorway. Man running from cops stops to pet cats, goes to jail.
-            <br>
-            Intently stare at the same spot poop in the plant pot but kitten is playing with dead mouse. 
-            Get video posted to internet for chasing red dot leave fur on owners clothes meow to be let 
-            out and mesmerizing birds leave fur on owners clothes or favor packaging over toy so purr for 
-            no reason. Meow to be let out play time intently sniff hand run outside as soon as door open 
-            yet destroy couch.
-        </p>
+            <h2>Which of this traits of cats do you like?</h2>
+            <!--This is a set of checkboxes that contaiins the characteristics of cats
+            that someone can choose from-->
+            <label for="skittish">
+                <input id="skittish" type="checkbox" name="catxtics" value="skittish">Skittish
+            </label> <br>
+            <label for="outgoing">
+                <input id="outgoing" type="checkbox" name="catxtics" value="outgoing">Outgoing
+            </label> <br>
+            <label for="dominant">
+                <input id="dominant" type="checkbox" name="catxtics" value="dominant">Dominant
+            </label> <br>
+            <label for="spontane">
+                <input id="spontane" type="checkbox" name="catxtics" value="spontane">Spontane
+            </label> <br>
+            <label for="friendly">
+                <input id="friendly" type="checkbox" name="catxtics" value="friendly">Friendly
+            </label> <br>
+        </div>
     </main>
-
-    <footer id="footer">Copyright Cat Photo App</footer>
+    <div id="footer-div">
+        <footer id="footer">Copyright Cat Photo App</footer>
+    </div>
 </body>
 </html>
